@@ -7,7 +7,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import eslintPluginSortDestructureKeys from "eslint-plugin-sort-destructure-keys";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
-import tseslint from "typescript-eslint";
+import { configs as tseslintConfigs } from "typescript-eslint";
 
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -15,12 +15,12 @@ export default defineConfig([
     files: ["**/*.{js,ts,tsx}"],
     extends: [
       js.configs.recommended,
-      tseslint.configs.recommended,
       jsxA11y.flatConfigs.recommended,
       reactPlugin.configs.flat.recommended,
       reactPlugin.configs.flat["jsx-runtime"],
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
+      tseslintConfigs.recommended,
       eslintPluginPrettierRecommended,
     ],
     languageOptions: {
