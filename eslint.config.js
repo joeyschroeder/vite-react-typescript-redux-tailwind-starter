@@ -29,5 +29,10 @@ export default defineConfig([
     rules: {
       "react/jsx-fragments": [2, "element"],
     },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
   },
 ]);
