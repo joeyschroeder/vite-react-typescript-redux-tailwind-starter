@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [ ] Sample todo
+- [ ] add conventional-changelog and release scripts
 
 ## In Progress
 
