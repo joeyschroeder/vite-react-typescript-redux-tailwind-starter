@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import { defineConfig, globalIgnores } from "eslint/config";
@@ -15,6 +16,8 @@ export default defineConfig([
       js.configs.recommended,
       tseslint.configs.recommended,
       jsxA11y.flatConfigs.recommended,
+      reactPlugin.configs.flat.recommended,
+      reactPlugin.configs.flat["jsx-runtime"],
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
       eslintPluginPrettierRecommended,
@@ -22,6 +25,9 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+    },
+    rules: {
+      "react/jsx-fragments": [2, "element"],
     },
   },
 ]);
