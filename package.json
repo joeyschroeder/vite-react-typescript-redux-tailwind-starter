@@ -11,7 +11,11 @@
     "url": "git+https://github.com/joeyschroeder/vite-react-typescript-redux-tailwind-starter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Joey Schroeder",
+    "email": "schrjos@gmail.com",
+    "url": "http://joeyschroeder.com/"
+  },
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
