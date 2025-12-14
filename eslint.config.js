@@ -9,7 +9,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import { configs, plugins } from "eslint-config-airbnb-extended";
 import { rules as prettierConfigRules } from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
-import reactPlugin from "eslint-plugin-react"; // required for eslint-config-airbnb-extended
+import reactPlugin from "eslint-plugin-react";
 import reactRefresh from "eslint-plugin-react-refresh";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import eslintPluginSortDestructureKeys from "eslint-plugin-sort-destructure-keys";
