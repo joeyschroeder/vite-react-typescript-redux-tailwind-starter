@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "commit",
+    "commit:lint": "commitlint --edit",
+    "prepare": "husky",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +20,15 @@
     "url": "http://joeyschroeder.com/"
   },
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/joeyschroeder/vite-react-typescript-redux-tailwind-starter/issues"
   },
-  "homepage": "https://github.com/joeyschroeder/vite-react-typescript-redux-tailwind-starter#readme"
+  "homepage": "https://github.com/joeyschroeder/vite-react-typescript-redux-tailwind-starter#readme",
+  "devDependencies": {
+    "@commitlint/cli": "20.2.0",
+    "@commitlint/config-conventional": "20.2.0",
+    "@commitlint/prompt-cli": "20.2.0",
+    "husky": "9.1.7"
+  }
 }
