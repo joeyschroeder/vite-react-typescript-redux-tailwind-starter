@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "bradlc.vscode-tailwindcss",
     "crystal-spider.jsdoc-generator",
     "dbaeumer.vscode-eslint",
     "ms-vscode.vscode-typescript-next",

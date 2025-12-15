@@ -13,7 +13,9 @@ import reactPlugin from 'eslint-plugin-react';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import eslintPluginSortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
+import tailwind from 'eslint-plugin-tailwindcss';
 import globals from 'globals';
+import path from 'path';
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -33,6 +35,7 @@ export default defineConfig([
       ...configs.react.typescript,
       reactPlugin.configs.flat['jsx-runtime'],
       reactRefresh.configs.vite,
+      tailwind.configs['flat/recommended'],
     ],
     languageOptions: {
       ecmaVersion: 2020,
@@ -61,6 +64,11 @@ export default defineConfig([
     settings: {
       react: {
         version: 'detect',
+      },
+      // This is required because of a bug with eslint-plugin-tailwindcss
+      // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/431
+      tailwindcss: {
+        config: path.resolve('./tailwind.config.js'),
       },
     },
   },
