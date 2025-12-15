@@ -1,10 +1,10 @@
-import "./App.css";
+import './App.css';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import viteLogo from "../public/vite.svg";
-import reactLogo from "./assets/react.svg";
-import { TestComponent } from "./TestComponent";
+import viteLogo from '../public/vite.svg';
+import reactLogo from './assets/react.svg';
+import { TestComponent } from './TestComponent';
 
 export function App() {
   const [countValue, setCountValue] = useState(0);

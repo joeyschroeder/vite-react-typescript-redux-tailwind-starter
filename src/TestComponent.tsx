@@ -24,7 +24,7 @@ interface Props {
 export function TestComponent(props: Props) {
   const { message, red } = props;
   // eslint-disable-next-line no-console
-  console.log("red: ", red);
+  console.log('red: ', red);
   return <div>{message}</div>;
 }
 
