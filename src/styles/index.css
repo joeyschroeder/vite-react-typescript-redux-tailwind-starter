@@ -1,4 +1,5 @@
-@import url("tailwindcss");
+/* stylelint-disable-next-line import-notation */
+@import "tailwindcss"; /* Tailwind CSS must match this pattern for Tailwind to replace this import. */
 
 @theme {
   --color-primary: #6366f1;

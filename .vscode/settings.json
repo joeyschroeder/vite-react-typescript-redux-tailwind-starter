@@ -1,8 +1,22 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "css.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [90],
   "editor.quickSuggestions": {
     "strings": true
   },
-  "files.associations": {
-    "*.css": "tailwindcss", // Enable Tailwind CSS IntelliSense for CSS files
-  },
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
 }
