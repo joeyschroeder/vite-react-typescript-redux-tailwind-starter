@@ -72,4 +72,10 @@ export default defineConfig([
       },
     },
   },
+  {
+    files: ['**/src/store/**/*.ts'],
+    rules: {
+      'no-param-reassign': 'off', // @reduxjs/toolkit slice actions often reassign state parameters
+    },
+  },
 ]);
