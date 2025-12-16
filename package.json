@@ -16,7 +16,8 @@
     "preview": "vite preview",
     "stylelint": "stylelint '**/*.css'",
     "stylelint:fix": "stylelint '**/*.css' --fix",
-    "test": "node test.js"
+    "test": "node test.js",
+    "version": "conventional-changelog"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "@vitejs/plugin-react": "^5.1.1",
     "babel-plugin-module-resolver": "^5.0.2",
     "babel-plugin-react-compiler": "^1.0.0",
+    "conventional-changelog": "^7.1.1",
     "eslint": "9.39.2",
     "eslint-config-airbnb-extended": "2.3.3",
     "eslint-config-airbnb-typescript": "18.0.0",
