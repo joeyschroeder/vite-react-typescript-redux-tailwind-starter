@@ -3,6 +3,7 @@ import 'eslint-import-resolver-typescript'; // required for eslint-config-airbnb
 import 'eslint-plugin-import-x'; // required for eslint-config-airbnb-extended
 import 'eslint-plugin-react-hooks'; // required for eslint-config-airbnb-extended
 import 'typescript-eslint'; // required for eslint-config-airbnb-extended
+import 'eslint-import-resolver-babel-module'; // required for babel-plugin-module-resolver support
 
 import js from '@eslint/js';
 import { defineConfig, globalIgnores } from 'eslint/config';
@@ -62,6 +63,9 @@ export default defineConfig([
       'sort-destructure-keys/sort-destructure-keys': 2,
     },
     settings: {
+      'import/resolver': {
+        'babel-module': {},
+      },
       react: {
         version: 'detect',
       },
