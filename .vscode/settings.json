@@ -2,15 +2,14 @@
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  // "[html]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
   "css.validate": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
   "editor.formatOnSave": true,
-  "editor.rulers": [90],
+  "editor.rulers": [
+    90
+  ],
   "editor.quickSuggestions": {
     "strings": true
   },
