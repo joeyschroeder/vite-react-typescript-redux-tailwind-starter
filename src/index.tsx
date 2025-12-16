@@ -22,6 +22,6 @@ if (container) {
   );
 } else {
   throw new Error(
-    `Root element with ID '${ELEMENT_ID}' was not found in the document. Ensure there is a corresponding HTML element with the ID '${ELEMENT_ID}' in your HTML file.`,
+    `Root element with ID '${ELEMENT_ID}' was not found in the document. Ensure there is acorresponding HTML element with the ID '${ELEMENT_ID}' in your HTML file.`,
   );
 }
