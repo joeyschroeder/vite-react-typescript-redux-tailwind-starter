@@ -17,7 +17,7 @@
     "stylelint": "stylelint '**/*.css'",
     "stylelint:fix": "stylelint '**/*.css' --fix",
     "test": "node test.js",
-    "version": "conventional-changelog"
+    "version": "conventional-changelog -p conventionalcommits"
   },
   "repository": {
     "type": "git",
@@ -55,6 +55,7 @@
     "babel-plugin-module-resolver": "^5.0.2",
     "babel-plugin-react-compiler": "^1.0.0",
     "conventional-changelog": "^7.1.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "eslint": "9.39.2",
     "eslint-config-airbnb-extended": "2.3.3",
     "eslint-config-airbnb-typescript": "18.0.0",
