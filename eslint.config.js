@@ -19,7 +19,7 @@ import globals from 'globals';
 import path from 'path';
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', '*.config.js', '*.config.ts']),
   {
     files: ['**/*.{js,ts,tsx}'],
     extends: [
@@ -49,6 +49,7 @@ export default defineConfig([
     },
     rules: {
       ...prettierConfigRules,
+      'import-x/no-unused-modules': [2, { unusedExports: true }],
       'import-x/order': 'warn',
       'import-x/prefer-default-export': 'off',
       'prettier/prettier': [
