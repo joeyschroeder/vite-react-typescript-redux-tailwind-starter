@@ -5,22 +5,21 @@ import 'eslint-plugin-react-hooks'; // required for eslint-config-airbnb-extende
 import 'typescript-eslint'; // required for eslint-config-airbnb-extended
 import 'eslint-import-resolver-babel-module'; // required for babel-plugin-module-resolver support
 
-import { configs, plugins } from 'eslint-config-airbnb-extended';
-import { defineConfig, globalIgnores } from 'eslint/config';
-
-import eslintPluginSortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
-import globals from 'globals';
 import js from '@eslint/js';
-import path from 'path';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import { configs, plugins } from 'eslint-config-airbnb-extended';
 import { rules as prettierConfigRules } from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import reactPlugin from 'eslint-plugin-react';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import eslintPluginSortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
 import tailwind from 'eslint-plugin-tailwindcss';
+import globals from 'globals';
+import path from 'path';
 
 const config = defineConfig([
-  globalIgnores(['dist', '*.config.js', '*.config.ts']),
+  globalIgnores(['dist']),
   {
     files: ['**/*.{js,ts,tsx}'],
     extends: [
@@ -63,7 +62,7 @@ const config = defineConfig([
       'simple-import-sort/imports': 'warn',
       'simple-import-sort/exports': 'warn',
       'sort-destructure-keys/sort-destructure-keys': 2,
-      "@typescript-eslint/explicit-function-return-type": "error"
+      '@typescript-eslint/explicit-function-return-type': 'error',
     },
     settings: {
       'import/resolver': {
@@ -80,9 +79,15 @@ const config = defineConfig([
     },
   },
   {
+    files: ['*.config.*'],
+    rules: {
+      'import-x/no-unused-modules': 'off',
+    },
+  },
+  {
     files: ['**/src/components/**/*.tsx'],
     rules: {
-      "@typescript-eslint/explicit-function-return-type": 0
+      '@typescript-eslint/explicit-function-return-type': 0,
     },
   },
   {
