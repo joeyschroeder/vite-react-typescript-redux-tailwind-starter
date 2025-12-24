@@ -19,7 +19,7 @@ import globals from 'globals';
 import path from 'path';
 
 const config = defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'node_modules', '.husky', '.vscode']),
   {
     files: ['**/*.{js,ts,tsx}'],
     extends: [
