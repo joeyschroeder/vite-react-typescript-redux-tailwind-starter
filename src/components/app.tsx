@@ -18,7 +18,7 @@ export function App() {
 
   // const onUpdateClick = () =>
   //   dispatch(sampleSlice.actions.update({ value: 10 }));
-  // const onResetClick = () => dispatch(sampleSlice.actions.reset());
+  const onResetClick = () => dispatch(sampleSlice.actions.reset());
 
   return (
     <>
@@ -36,9 +36,16 @@ export function App() {
         <button
           type="button"
           onClick={onDecrementClick}
-          className="rounded border p-1"
+          className="mr-1 rounded border p-1"
         >
           decrease -
+        </button>
+        <button
+          type="button"
+          onClick={onResetClick}
+          className="rounded border p-1"
+        >
+          reset
         </button>
       </div>
       <p>Click on the Vite and React logos to learn more</p>

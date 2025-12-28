@@ -23,7 +23,7 @@ interface Duck<Type> {
 export function createDuck<Type extends object>(
   config: Config<Type>,
 ): Duck<Type> {
-  const { initialState, name } = config;
+  const { initialState = {}, name } = config;
 
   if (!name) throw new Error('Name is required');
 

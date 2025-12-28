@@ -11,7 +11,7 @@ export default defineConfig({
           [
             babelPluginModuleResolver,
             {
-              root: ['./src'],
+              root: ['.'],
               alias: {
                 components: './src/components',
                 store: './src/store',
