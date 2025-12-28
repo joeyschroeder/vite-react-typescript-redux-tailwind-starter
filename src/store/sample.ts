@@ -1,5 +1,4 @@
-import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice } from '@reduxjs/toolkit';
+import { createDuck } from 'utils/create-duck/create-duck';
 
 interface SampleState {
   value: number;
@@ -9,18 +8,7 @@ const initialState: SampleState = {
   value: 0,
 };
 
-export const sampleSlice = createSlice({
+export const sampleSlice = createDuck({
   name: 'sample',
   initialState,
-  reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
-    },
-  },
 });

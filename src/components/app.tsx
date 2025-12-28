@@ -7,10 +7,18 @@ import type { RootState } from '../store';
 export function App() {
   const dispatch = useDispatch();
 
-  const onIncrementClick = () => dispatch(sampleSlice.actions.increment());
-  const onDecrementClick = () => dispatch(sampleSlice.actions.decrement());
+  const countValue = useSelector((state: RootState) =>
+    sampleSlice.selectors.selectValue(state),
+  );
 
-  const countValue = useSelector((state: RootState) => state.sample.value);
+  const onIncrementClick = () =>
+    dispatch(sampleSlice.actions.updateValue(countValue + 1));
+  const onDecrementClick = () =>
+    dispatch(sampleSlice.actions.updateValue(countValue - 1));
+
+  // const onUpdateClick = () =>
+  //   dispatch(sampleSlice.actions.update({ value: 10 }));
+  // const onResetClick = () => dispatch(sampleSlice.actions.reset());
 
   return (
     <>
