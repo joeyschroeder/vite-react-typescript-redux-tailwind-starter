@@ -1,8 +1,8 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-param-reassign */
 import { type Draft, type PayloadAction } from '@reduxjs/toolkit';
+import type { NonFunction } from 'types/non-function';
 
-import type { NonFunction } from '../../types/non-function';
 import { getNormalizedStateParamName } from './get-normalized-state-parent-name';
 import { isInitialStatePrimitive } from './is-initial-state-primitive';
 
