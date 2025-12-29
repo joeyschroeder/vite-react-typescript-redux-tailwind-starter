@@ -2,14 +2,10 @@ import { TestComponent } from 'components/test-component';
 import { useDispatch, useSelector } from 'react-redux';
 import { sampleSlice } from 'store/sample';
 
-import type { RootState } from '../store';
-
 export function App() {
   const dispatch = useDispatch();
 
-  const countValue = useSelector((state: RootState) =>
-    sampleSlice.selectors.selectValue(state),
-  );
+  const countValue = useSelector(sampleSlice.selectors.selectValue);
 
   const onIncrementClick = () =>
     dispatch(sampleSlice.actions.updateValue(countValue + 1));

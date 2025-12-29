@@ -7,5 +7,3 @@ export const store = configureStore({
     [sampleSlice.name]: sampleSlice.reducer,
   },
 });
-
-export type RootState = ReturnType<typeof store.getState>;
